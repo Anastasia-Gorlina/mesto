@@ -11,10 +11,6 @@
   line-height: 17px;
 }
 
-.popup__profile:nth-child() {
-    margin-bottom: 43px;
-}
-
 @media screen and (max-width: 590px) {
     .popup__profile {
       width: 238px;
