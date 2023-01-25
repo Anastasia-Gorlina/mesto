@@ -9,11 +9,11 @@ const profileSubtitle = document.querySelector('.profile__status');
 const popupButtonSave = profilePopup.querySelector('.popup__sumbit-button');
 
 const openPopup = function (popup) {
-  popup.classList.add('popup__opened');
+  popup.classList.add('popup_opened');
 }
 
 const closePopup = function (popup) {
-  popup.classList.remove('popup__opened');
+  popup.classList.remove('popup_opened');
 }
 
 function submitProfileInfo (event) {
