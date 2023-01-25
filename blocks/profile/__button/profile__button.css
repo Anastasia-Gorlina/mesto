@@ -1,0 +1,26 @@
+.profile__button {
+  background-image: url(../../../images/pin.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  transition: opacity .3s linear;
+  border: 1px solid #FFFFFF;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+.profile__button:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 920px) {
+  .profile__button {
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    line-height: 32.68px;
+    margin: 0px;
+  }
+}

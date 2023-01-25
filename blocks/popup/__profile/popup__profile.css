@@ -1,0 +1,29 @@
+.popup__profile {
+  width: 358px;
+  height: 14px;
+  margin: 0px auto 30px;
+  padding-top: 0px;
+  padding-bottom: 13px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.popup__profile:nth-child() {
+    margin-bottom: 43px;
+}
+
+@media screen and (max-width: 590px) {
+    .popup__profile {
+      width: 238px;
+      height: 14px;
+      margin-bottom: 30px;
+      padding-bottom: 13px;
+    }
+  }
+
+.popup__profile:nth-child() {
+    margin-bottom: 48px;
+}

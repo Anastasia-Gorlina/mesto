@@ -1,0 +1,18 @@
+.photo-grid__vector {
+  background-color: transparent;
+  transition: opacity .3s linear;
+  width: 22px;
+  height: 19px;
+  cursor: pointer;
+  border: none;
+  margin: 0px;
+}
+
+.photo-grid__vector :hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+.photo-grid__vector_black  {
+  background: url(../../../images/Vector_black.png);
+  background-size: cover;
+}
