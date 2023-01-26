@@ -10,7 +10,7 @@
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 920px) {
   .profile__status {
     height: 14px;
     text-align: center;
