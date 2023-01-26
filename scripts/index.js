@@ -6,7 +6,6 @@ const popupName = profilePopup.querySelector('.popup__profile_type_name');
 const popupInformation = profilePopup.querySelector('.popup__profile_type_information');
 const profileTitle = document.querySelector('.profile__name');
 const profileSubtitle = document.querySelector('.profile__status');
-const popupButtonSave = profilePopup.querySelector('.popup__sumbit-button');
 
 const openPopup = function (popup) {
   popup.classList.add('popup_opened');

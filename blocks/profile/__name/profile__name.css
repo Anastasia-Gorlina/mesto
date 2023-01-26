@@ -1,9 +1,8 @@
 .profile__name {
-  max-width: 292px;
+  max-width: 294px;
   color: white;
   padding: 0px;
   margin: 0px;
-  font-family: 'Inter', 'Sans-serif';
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -16,7 +15,8 @@
   .profile__name {
   text-align: center;
   font-size: 27px;
-  line-height: 32.68px;
+  line-height: 33px;
   max-width: 189px;
+  margin-left: 35px;
   }
 }
