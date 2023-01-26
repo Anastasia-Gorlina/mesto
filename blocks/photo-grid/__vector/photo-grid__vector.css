@@ -3,16 +3,10 @@
   transition: opacity .3s linear;
   background-image: url(../../../images/like.svg);
   background-repeat: no-repeat;
-  background-color: transparent;
   width: 22px;
   height: 19px;
   cursor: pointer;
   border: none;
   margin: 0px;
   transition: opacity 0.5s;
-}
-
-.photo-grid__vector :hover {
-  opacity: 50%;
-  cursor: pointer;
 }
