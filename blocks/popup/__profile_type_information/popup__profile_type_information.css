@@ -1,9 +1,0 @@
-.popup__profile_type_information {
-    margin-bottom: 48px;
-}
-
-@media screen and (max-width: 720px) {
-    .popup__profile_type_information {
-      margin-bottom: 45px;
-    }
-  }
