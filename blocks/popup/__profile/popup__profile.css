@@ -1,7 +1,7 @@
 .popup__profile {
   width: 358px;
   height: 14px;
-  margin: 0px auto 48px;
+  margin: 0px auto 30px;
   padding-top: 0px;
   padding-bottom: 13px;
   border: none;
@@ -11,10 +11,9 @@
   line-height: 17px;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 720px) {
     .popup__profile {
       width: 238px;
-      margin-bottom: 45px;
       padding-bottom: 13px;
     }
   }
