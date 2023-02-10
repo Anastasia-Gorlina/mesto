@@ -10,7 +10,7 @@
 @import url(../blocks/photo-grid/__inf/photo-grid__inf.css);
 @import url(../blocks/photo-grid/__title/photo-grid__title.css);
 @import url(../blocks/photo-grid/__vector/photo-grid__vector.css);
-@import url(../blocks/photo-grid/__vector);
+@import url(../blocks/photo-grid/__vector/_active/photo-grid__vector_active.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__text/footer__text.css);
 @import url(../blocks/header/header.css);
@@ -21,11 +21,11 @@
 @import url(../blocks/popup/__create/popup__create.css);
 @import url(../blocks/popup/__figure-container/popup__figure-container.css);
 @import url(../blocks/popup/__figure/popup__figure.css);
+@import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__form-set/popup__form-set.css);
 @import url(../blocks/popup/__image-description/popup__image-description.css);
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__input-error/popup__input-error.css);
-@import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__profile/popup__profile.css);
 @import url(../blocks/popup/__sumbit-button/popup__sumbit-button.css);

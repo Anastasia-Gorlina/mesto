@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./pages/index.css">
     </head>
     <body class="page">
+      
       <header class="header">
         <img class="header__logo" src="./images/Logo.svg" alt="Название сайта">
       </header>
@@ -22,85 +23,35 @@
         </div>
         <button type="button" class="profile__button"></button>
       </section>
-      <section class="photo-grid">
-      <ul class="photo-grid__elements">
-        <li class="photo-grid__element">
-          <img class="photo-grid__image" src="https://images.unsplash.com/photo-1652716456950-0c1d6e1433cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fCVEMCU5NCVEMCVCMCVEMCVCMyVEMCVCNSVEMSU4MSVEMSU4MiVEMCVCMCVEMCVCRHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60" alt="Дагестан">
-          <div class="photo-grid__inf">
-          <h2 class="photo-grid__title">Дагестан</h2>
-          <button type="button" class="photo-grid__vector photo-grid__vector_active'"></button>
-        </div>
-        <button class="photo-grid__element-delete" type="button"></button>
-        </li>
-        <li class="photo-grid__element">
-          <img class="photo-grid__image" src="https://images.unsplash.com/photo-1638989432598-78740c9ba7a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" alt="Гора Эльбрус">
-          <div class="photo-grid__inf">
-            <h2 class="photo-grid__title">Гора Эльбрус</h2>
-            <button type="button" class="photo-grid__vector photo-grid__vector_active'"></button>
-          </div>
-          <button class="photo-grid__element-delete" type="button"></button>
-        </li>
-        <li class="photo-grid__element">
-          <img class="photo-grid__image" src="https://images.unsplash.com/photo-1629891592102-31221061e755?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fCVEMCU5NCVEMCVCMCVEMCVCMyVEMCVCNSVEMSU4MSVEMSU4MiVEMCVCMCVEMCVCRHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60" alt="Домбай-2">
-          <div class="photo-grid__inf">
-            <h2 class="photo-grid__title">Дагестан</h2>
-            <button type="button" class="photo-grid__vector photo-grid__vector_active'"></button>
-         </div>
-         <button class="photo-grid__element-delete" type="button"></button>
-        </li>
-        <li class="photo-grid__element">
-          <img class="photo-grid__image" src="https://images.unsplash.com/photo-1610984660607-90b67b18e2c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fCVEMCU5MSVEMCVCMCVEMCVCOSVEMCVCQSVEMCVCMCVEMCVCQnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60" alt="Байкал">
-          <div class="photo-grid__inf">
-            <h2 class="photo-grid__title">Байкал</h2>
-            <button type="button" class="photo-grid__vector photo-grid__vector_active'"></button>
-          </div>
-          <button class="photo-grid__element-delete" type="button"></button>
-        </li>
-        <li class="photo-grid__element">
-          <img class="photo-grid__image" src="https://images.unsplash.com/photo-1617911478446-c7f1dd96966e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8JUQwJTk0JUQwJUJFJUQwJUJDJUQwJUIxJUQwJUIwJUQwJUI5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60" alt="Домбай">
-          <div class="photo-grid__inf">
-            <h2 class="photo-grid__title">Домбай</h2>
-            <button type="button" class="photo-grid__vector photo-grid__vector_active'"></button>
-          </div> 
-          <button class="photo-grid__element-delete" type="button"></button>
-        </li>
-        <li class="photo-grid__element">
-          <img class="photo-grid__image" src="https://images.unsplash.com/photo-1662646358660-158731957700?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fCVEMCU5MyVEMCVCRSVEMSU4MCVEMCVCMCUyMCVEMCVBRCVEMCVCQiVEMSU4QyVEMCVCMSVEMSU4MCVEMSU4MyVEMSU4MXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60" alt="Дагестан-2">
-          <div class="photo-grid__inf">
-            <h2 class="photo-grid__title">Гора Эльбрус</h2>
-            <button type="button" class="photo-grid__vector photo-grid__vector_active'"></button>
-          </div>
-          <button class="photo-grid__element-delete" type="button"></button>
-        </li>
-      </ul>
-    </section>
+      <section class="photo-grid" aria-label="Фотографии, добавленные пользователем">
+        <ul class="photo-grid__elements">
+        </ul>
+      </section>
     </main>
     <section class="popup popup_type_profile" aria-label="Редактирование профиля">
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <button type="button" class="popup__close-button"></button>
+        <fieldset class="popup__form-set">
         <form class="popup__form" name="profile-info">
             <input type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_type_name" minlength="2" maxlength="40" required="">
-            <span class="popup__input-err popup__name-err"></span>
             <input type="text" name="popup__information" placeholder="Введите описание" class="popup__profile popup__profile_type_information" minlength="2" maxlength="200" required="">
-            <span class="popup__input-err popup__information-err"></span>
             <button type="submit" class="popup__sumbit-button">Сохранить</button>
-        </form>
+          </fieldset>
+          </form>
         <button class="popup__close-button popup__close-button_type_profile" type="button"></button>
       </div>
     </section>
     <section class="popup popup_type_card" aria-label="Добавление фото">
       <div class="popup__container">
         <h3 class="popup__title">Новое место</h3>
-        <button type="button" class="popup__close-button"></button>
+        <fieldset class="popup__form-set">
         <form class="popup__form" name="profile-form" novalidate="">
-          <input id="popup__post" class="popup__input popup__input_img-name" name="post__name" placeholder="Название" type="text" minlength="2" maxlength="30" required="">
-          <span class="popup__input-error popup__img-error"></span>
-          <input id="popup__link-url" class="popup__input popup__input_img-link" type="url" name="post-link" placeholder="Ссылка на картинку" required="">
-          <span class="popup__inpput-error popup__link-error">Пожалуйста, заполните это поле.</span>
-          <button class="popup__create popup__create_disabled" type="submit" disabled="">Создать</button>
+          <input id="popup__post" class="popup__profile popup__profile_img-name" name="post__name" placeholder="Название" type="text" minlength="2" maxlength="30" required="">
+          <input id="popup__link-url" class="popup__profile popup__profile_img-link" type="url" name="post-link" placeholder="Ссылка на картинку" required="">
+          <button class="popup__sumbit-button" type="submit" disabled="">Создать</button>
+        </fieldset>
         </form>
-        <button class="popup__close-button popup__close-button_type_mesto" type="button"></button>
+        <button class="popup__close-button popup__close-button_type_card" type="button"></button>
       </div>
     </section>
     <section class="popup popup_type_image" aria-label="Увеличение изображения">
@@ -118,6 +69,16 @@
     <footer class="footer">
       <p class="footer__text">&copy; 2022 Mesto Russia</p>
     </footer>
+    <template id="photogrid">
+      <li class="photo-grid__element">
+        <img class="photo-grid__image">
+        <div class="photo-grid__inf">
+          <h2 class="photo-grid__title"></h2>
+          <button type="button" class="photo-grid__vector"></button>
+        </div>
+        <button type="button" class="photo-grid__element-delete"></button>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
     </body>
 </html>
