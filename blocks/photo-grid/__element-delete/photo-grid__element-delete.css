@@ -7,9 +7,9 @@
   transition: opacity 0.3s linear;
   width: 18px;
   height: 19px;
-  position: relative;
-  bottom: calc(361px - 20px - 18px);
-  margin-left: calc(282px - 20px - 18px);
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .photo-grid__element-delete:hover {

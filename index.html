@@ -31,12 +31,10 @@
     <section class="popup popup_type_profile" aria-label="Редактирование профиля">
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <fieldset class="popup__form-set">
-        <form class="popup__form" name="profile-info">
+        <form class="popup__form popup-edit-form" name="profile-info">
             <input type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_type_name" minlength="2" maxlength="40" required="">
             <input type="text" name="popup__information" placeholder="Введите описание" class="popup__profile popup__profile_type_information" minlength="2" maxlength="200" required="">
             <button type="submit" class="popup__sumbit-button">Сохранить</button>
-          </fieldset>
           </form>
         <button class="popup__close-button popup__close-button_type_profile" type="button"></button>
       </div>
@@ -44,12 +42,10 @@
     <section class="popup popup_type_card" aria-label="Добавление фото">
       <div class="popup__container">
         <h3 class="popup__title">Новое место</h3>
-        <fieldset class="popup__form-set">
-        <form class="popup__form" name="profile-form" novalidate="">
+        <form class="popup__form popup-add-form" name="profile-form" novalidate="">
           <input id="popup__post" class="popup__profile popup__profile_img-name" name="post__name" placeholder="Название" type="text" minlength="2" maxlength="30" required="">
           <input id="popup__link-url" class="popup__profile popup__profile_img-link" type="url" name="post-link" placeholder="Ссылка на картинку" required="">
           <button class="popup__sumbit-button" type="submit" disabled="">Создать</button>
-        </fieldset>
         </form>
         <button class="popup__close-button popup__close-button_type_card" type="button"></button>
       </div>
@@ -57,10 +53,8 @@
     <section class="popup popup_type_image" aria-label="Увеличение изображения">
       <div class="popup__figure-container">
       <figure class="popup__figure">
-        <button type="button" class="popup__close popup__button-close"></button>
-        <img class="popup__image" src="#" alt="#">
-          ::before
-        </img>
+        <img class="popup__image" src="#" alt="#"></img>
+        <figcaption class="popup-image-status"></figcaption>
         <h5 class="popup__image-name"></h5>
       </figure>
       <button class="popup__close-button popup__close-button_image" type="button"></button>
@@ -69,7 +63,7 @@
     <footer class="footer">
       <p class="footer__text">&copy; 2022 Mesto Russia</p>
     </footer>
-    <template id="photogrid">
+    <template class="card__template">
       <li class="photo-grid__element">
         <img class="photo-grid__image">
         <div class="photo-grid__inf">
