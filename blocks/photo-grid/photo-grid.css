@@ -2,15 +2,24 @@
   display: grid;
   width: 100%;
   max-width: 880px;
-  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   margin: 0 auto;
   gap: 17px;
-  padding: 51px 0 67px;
+  padding: 51px 0px 60px;
+  overflow-x:hidden; 
+  list-style-type:  none;
 }
 
-@media screen and (max-width:320px) {
-  .photo-grid { 
+@media screen and (max-width: 879px) {
+.photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width:400px) {
+.photo-grid { 
   padding: 36px 0 48px;
+  grid-template-columns: repeat(1, 1fr);
 }
 }

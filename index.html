@@ -24,8 +24,6 @@
         <button type="button" class="profile__button"></button>
       </section>
       <section class="photo-grid" aria-label="Фотографии, добавленные пользователем">
-        <ul class="photo-grid__elements">
-        </ul>
       </section>
     </main>
     <section class="popup popup_type_profile" aria-label="Редактирование профиля">
@@ -34,7 +32,7 @@
         <form class="popup__form popup-edit-form" name="profile-info">
             <input type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_type_name" minlength="2" maxlength="40" required="">
             <input type="text" name="popup__information" placeholder="Введите описание" class="popup__profile popup__profile_type_information" minlength="2" maxlength="200" required="">
-            <button type="submit" class="popup__sumbit-button">Сохранить</button>
+            <button type="submit" class="popup__sumbit-button popup__button">Сохранить</button>
           </form>
         <button class="popup__close-button popup__close-button_type_profile" type="button"></button>
       </div>
@@ -45,7 +43,7 @@
         <form class="popup__form popup-add-form" name="profile-form" novalidate="">
           <input id="popup__post" class="popup__profile popup__profile_img-name" name="post__name" placeholder="Название" type="text" minlength="2" maxlength="30" required="">
           <input id="popup__link-url" class="popup__profile popup__profile_img-link" type="url" name="post-link" placeholder="Ссылка на картинку" required="">
-          <button class="popup__sumbit-button" type="submit" disabled="">Создать</button>
+          <button type="submit" class="popup__create-button popup__button">Создать</button>
         </form>
         <button class="popup__close-button popup__close-button_type_card" type="button"></button>
       </div>
@@ -63,15 +61,15 @@
     <footer class="footer">
       <p class="footer__text">&copy; 2022 Mesto Russia</p>
     </footer>
-    <template class="card__template">
-      <li class="photo-grid__element">
+    <template class="photo-grid__template">
+      <article class="photo-grid__element">
         <img class="photo-grid__image">
         <div class="photo-grid__inf">
           <h2 class="photo-grid__title"></h2>
           <button type="button" class="photo-grid__vector"></button>
         </div>
         <button type="button" class="photo-grid__element-delete"></button>
-      </li>
+      </article>
     </template>
     <script src="./scripts/index.js"></script>
     </body>
