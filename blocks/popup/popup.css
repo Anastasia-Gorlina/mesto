@@ -9,5 +9,5 @@
   top: 0px;
   left: 0px;
   font-family: 'Inter', 'Arial', 'sans-serif';
-  transition: visibility 0.2s, opacity 0.2s ease-in;
+  transition: visibility .3s, opacity .9s ease-in-out;
 }
