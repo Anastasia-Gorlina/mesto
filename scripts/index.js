@@ -125,11 +125,6 @@ popupCloseBigImage.addEventListener('click', function () {
     closePopup(popupBig);
 })
 
-popupProfile.addEventListener('click', closePopupOverlayClick);
-popupAddCard.addEventListener('click', closePopupOverlayClick);
-popupBig.addEventListener('click', closePopupOverlayClick);
-popupAddCardForm.addEventListener('submit', submitFormCard);
-
 function submitProfileInfo(event) {
     event.preventDefault();
     profileName.textContent = popupName.value;
@@ -146,3 +141,21 @@ function submitFormCard(event) {
     event.target.reset();
     closePopup(popupAddCard)
 }
+
+popupOpenButtonElement.addEventListener('click', function () {
+    openPopup(popupProfile);
+    popupName.value = profileName.textContent;
+    popupInformation.value = profileStatus.textContent;
+});
+popupCloseButtonElement.addEventListener('click', function () {
+    closePopup(popupProfile)
+});
+popupProfileForm.addEventListener('submit', submitProfileInfo);
+popupCloseBigImage.addEventListener('click', function () {
+    closePopup(popupBig)
+});
+
+popupProfile.addEventListener('click', closePopupOverlayClick);
+popupAddCard.addEventListener('click', closePopupOverlayClick);
+popupBig.addEventListener('click', closePopupOverlayClick);
+popupAddCardForm.addEventListener('submit', submitFormCard);
