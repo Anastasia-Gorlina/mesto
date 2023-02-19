@@ -91,23 +91,17 @@ const renderInitalCards = (item) => {
     cardsContainer.prepend(createCard(item));
 }
 
-initialCards.forEach((item) => {
-    renderInitalCards(item);
-})
+initialCards.forEach(renderInitalCards)
 
-const openPopup = function (popup) {
-    popup.classList.add('popup_opened');
-}
+
 popupOpenButtonElement.addEventListener('click', function () {
     openPopup(popupProfile)
 });
+
 popupOpenCard.addEventListener('click', function () {
     openPopup(popupAddCard);
 });
 
-const closePopup = function (popup) {
-    popup.classList.remove('popup_opened');
-}
 
 const closePopupOverlayClick = (event) => {
     if (!event.target.closest('.popup__container')) {
@@ -159,3 +153,27 @@ popupProfile.addEventListener('click', closePopupOverlayClick);
 popupAddCard.addEventListener('click', closePopupOverlayClick);
 popupBig.addEventListener('click', closePopupOverlayClick);
 popupAddCardForm.addEventListener('submit', submitFormCard);
+
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupByEcs);
+}
+
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', closePopupByEcs);
+}
+
+function closePopupByEcs(event) {
+    if (event.key ==='Escape') {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup);
+    }
+}
+
+popupOpenCard.addEventListener('click', function () {
+    popupCreateButton.setAttribute('disabled', true);
+    popupCreateButton.classList.add('popup__button_disabled');
+    popupAddCardForm.reset();
+    openPopup(popupAddCard)
+})
