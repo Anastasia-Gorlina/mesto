@@ -28,10 +28,10 @@ const checkInvalidInput = (formElement, input, config) => {
 };
 
 const resetValidation = (formElement, config) => {
-    const inputList = [...formElement.querySelectorAll(config.inputSelector)];
+    const inputList = formElement.querySelectorAll(config.inputSelector);
 
     inputList.forEach((input) => {
-        hideInvalidInput(formElement, input, config);
+        coverInputError(formElement, input, config);
     });
 }
 

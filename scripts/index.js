@@ -93,16 +93,6 @@ const renderInitalCards = (item) => {
 
 initialCards.forEach(renderInitalCards)
 
-
-popupOpenButtonElement.addEventListener('click', function () {
-    openPopup(popupProfile)
-});
-
-popupOpenCard.addEventListener('click', function () {
-    openPopup(popupAddCard);
-});
-
-
 const closePopupOverlayClick = (event) => {
     if (!event.target.closest('.popup__container')) {
         closePopup(event.target)
@@ -141,13 +131,9 @@ popupOpenButtonElement.addEventListener('click', function () {
     popupName.value = profileName.textContent;
     popupInformation.value = profileStatus.textContent;
 });
-popupCloseButtonElement.addEventListener('click', function () {
-    closePopup(popupProfile)
-});
+
 popupProfileForm.addEventListener('submit', submitProfileInfo);
-popupCloseBigImage.addEventListener('click', function () {
-    closePopup(popupBig)
-});
+
 
 popupProfile.addEventListener('click', closePopupOverlayClick);
 popupAddCard.addEventListener('click', closePopupOverlayClick);
