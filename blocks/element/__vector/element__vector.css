@@ -1,4 +1,4 @@
-.photo-grid__vector {
+.element__vector {
   background-color: transparent;
   transition: opacity .3s linear;
   background-image: url(../../../images/like.svg);
@@ -10,6 +10,6 @@
   margin: 0px;
 }
 
-.photo-grid__vector:hover {
+.element__vector:hover {
   opacity: .5;
 }

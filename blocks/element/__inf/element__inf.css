@@ -1,4 +1,4 @@
-.photo-grid__inf {
+.element__inf {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

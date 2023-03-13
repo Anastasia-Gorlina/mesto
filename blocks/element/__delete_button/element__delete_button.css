@@ -1,4 +1,4 @@
-.photo-grid__element-delete {
+.element__delete_button {
   background-image: url(../../../images/delete.svg);
   background-repeat: no-repeat;
   background-color: transparent;
@@ -12,6 +12,6 @@
   right: 20px;
 }
 
-.photo-grid__element-delete:hover {
+.element__delete_button:hover {
     opacity: 0.6;
 }

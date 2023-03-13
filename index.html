@@ -11,6 +11,7 @@
       <header class="header">
         <img class="header__logo" src="./images/Logo.svg" alt="Название сайта">
       </header>
+
     <main class="main">
       <section class="profile">
         <img class="profile__avatar" src="./images/avatar.png" alt="Аватар">
@@ -23,9 +24,14 @@
         </div>
         <button type="button" class="profile__button"></button>
       </section>
-      <section class="photo-grid" aria-label="Фотографии, добавленные пользователем">
+      <section class="elements" aria-label="Фотографии, добавленные пользователем">
       </section>
     </main>
+    
+    <footer class="footer">
+      <p class="footer__text">&copy; 2022 Mesto Russia</p>
+    </footer>
+
     <section class="popup popup_type_profile" aria-label="Редактирование профиля">
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
@@ -39,6 +45,7 @@
         <button class="popup__close-button popup__close-button_type_profile" type="button"></button>
       </div>
     </section>
+
     <section class="popup popup_type_card" aria-label="Добавление фото">
       <div class="popup__container">
         <h3 class="popup__title">Новое место</h3>
@@ -52,6 +59,7 @@
         <button class="popup__close-button popup__close-button_type_card" type="button"></button>
       </div>
     </section>
+
     <section class="popup popup_type_image" aria-label="Увеличение изображения">
       <div class="popup__figure-container">
       <figure class="popup__figure">
@@ -62,20 +70,21 @@
       <button class="popup__close-button popup__close-button_image" type="button"></button>
     </div>
     </section>
-    <footer class="footer">
-      <p class="footer__text">&copy; 2022 Mesto Russia</p>
-    </footer>
-    <template class="photo-grid__template">
-      <article class="photo-grid__element">
-        <img class="photo-grid__image">
-        <div class="photo-grid__inf">
-          <h2 class="photo-grid__title"></h2>
-          <button type="button" class="photo-grid__vector"></button>
+
+    <template class="card__template">
+      <article class="element">
+        <img class="element__image">
+        <div class="element__inf">
+          <h2 class="element__title"></h2>
+          <button type="button" aria-label="Кнопка лайк" class="element__vector"></button>
         </div>
-        <button type="button" class="photo-grid__element-delete"></button>
+        <button type="button" aria-label="Кнопка удалить" class="element__delete_button"></button>
       </article>
     </template>
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
+
+    <script type="module" src="./scripts/Card.js"></script>
+    <script type="module" src="./scripts/FormValidator.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+    
     </body>
 </html>
