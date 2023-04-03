@@ -24,9 +24,9 @@ const popupOpenCard = document.querySelector('.profile__button');//PLUS BUTTON
 const popupImageLink = popupAddCard.querySelector('.popup__profile_img-link');
 const popupCreateButton = popupAddCard.querySelector('.popup__create-button');//SAVE BUTTON NEW CARD
 const popupCloseCard = popupAddCard.querySelector('.popup__close-button');//BUTTON CLOSE POPUP*/
-const popupAddCardForm = popupAddCard.querySelector('.popup-add-form');//FORM NEW POPUP
+const popupAddCardForm = document.querySelector('.popup-add-form');//FORM NEW POPUP
 
-const popupWithImage = new PopupWithImage('#popup-big-picture');
+const popupWithImage = new PopupWithImage('#popup-big-image');
 popupWithImage.setEventListeners();
 
 
