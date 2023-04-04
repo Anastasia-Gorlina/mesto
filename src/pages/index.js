@@ -70,12 +70,12 @@ function submitFormCard(event) {
 */
 
 function submitProfileInfo(data) {
-    userInfo.setUseInfo(data['popup__name'], data['popup__status']);
+    userInfo.setUseInfo(data['popup__name'], data['popup__information']);
     popupProfile.close();
 }
 
 function submitFormCard(data) {
-    section.addItem(createCard({name: data['popup__profile_img-name'], link: data['popup__link']}));
+    section.addItem(createCard({name: data['popup__name'], link: data['popup__link']}));
     popupAddCard.close();
 }
 

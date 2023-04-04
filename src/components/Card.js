@@ -4,7 +4,7 @@ export class Card {
     this._templateSelector = '.card__template';
     this._name = CardData.name;
     this._link = CardData.link;
-    this._handleCardClick = handleCardClick;
+    this._handleCardClick = handleCardClick
     this._articleElement = this._getArticleHTMLElement();
        
     this._deleteButtonElement = this._articleElement.querySelector('.element__delete_button')
