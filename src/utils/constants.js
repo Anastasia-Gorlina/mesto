@@ -3,6 +3,6 @@ export const validatorConfig = {
   inputSelector: '.popup__profile',
   submitButtonSelector: '.popup__button',
   inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'popup__input_type_error',
+  inputErrorClass: 'popup__profile_type_error',
   errorClass: 'popup__error_visible',
 }

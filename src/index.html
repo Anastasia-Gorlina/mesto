@@ -36,10 +36,10 @@
     <section class="popup popup_type_profile" aria-label="Редактирование профиля">
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form popup-edit-form" name="profile-info" novalidate="">
-            <input type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_type_name" id="profile-edit-name" minlength="2" maxlength="40" required="">
+        <form class="popup-edit-form popup__form" name="profile-info" novalidate="">
+          <input id="profile-edit-name" type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_name" minlength="2" maxlength="40" required="">
             <span id="profile-edit-name-error" class="popup__error">Вы пропустили это поле.</span>
-            <input type="text" name="popup__information" placeholder="Введите описание" class="popup__profile popup__profile_type_information" id="profile-edit-information" minlength="2" maxlength="200" required="">
+            <input id="profile-edit-information" type="text" name="popup__inf" placeholder="Введите описание" class="popup__profile popup__profile_status" minlength="2" maxlength="200" required="">
             <span id="profile-edit-information-error" class="popup__error">Вы пропустили это поле.</span>
             <button type="submit" class="popup__sumbit-button popup__button">Сохранить</button>
           </form>

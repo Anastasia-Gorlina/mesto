@@ -6,8 +6,8 @@ export class UserInfo {
     getUserInfo() {
         return {
             name: this._userName.textContent,
-            info: this._userInfo.textContent,
-        }
+            info: this._userInfo.textContent
+        };
     }
     setUseInfo(name, info) {
         this._userName.textContent = name;
