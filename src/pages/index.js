@@ -1,11 +1,12 @@
 import '../pages/index.css';
-import { initialCards, enableValidation } from '../components/data.js';
+import { initialCards, enableValidation} from '../utils/data.js';
 import { Card }  from '../components/Card.js';
 import { FormValidator } from '../components/FormValidator.js';
 import Section from '../components/Section.js';
 import { PopupWithImage } from '../components/PopupWithImage.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
+import { validatorConfig } from '../utils/constants.js';
 
 // POPUP PROFILE
 
@@ -30,8 +31,8 @@ const popupWithImage = new PopupWithImage('#popup-big-image');
 popupWithImage.setEventListeners();
 
 
-const createCard = (CardData, templateSelector, handleCardClick) => {
-    return new Card(CardData, templateSelector, handleCardClick).createCard();
+const createCard = (cardData) => {
+    return new Card(cardData, '.card__template', popupWithImage.open).createCard();
 }
 
 /*const section = new Section({items: initialCards, renderer: createCard}, '.elements');
@@ -85,8 +86,6 @@ popupProfile.setEventListeners();
 const popupAddCard = new PopupWithForm('.popup_type_card', submitFormCard);
 popupAddCard.setEventListeners();
 
-
-
 const section = new Section({items: initialCards, renderer: createCard}, '.elements');
 section.renderItems(popupWithImage.open);
 
@@ -126,14 +125,6 @@ popupOpenCard.addEventListener('click', function () {
     popupAddCard.open();
 })
 
-const validatorConfig = {
-    formSelector: '.popup__form',
-    inputSelector: '.popup__profile',
-    submitButtonSelector: '.popup__button',
-    inactiveButtonClass: 'popup__button_disabled',
-    inputErrorClass: 'popup__input_type_error',
-    errorClass: 'popup__error_visible',
-};
 const addCardFormValidor = new FormValidator(validatorConfig, popupAddCardForm);
 addCardFormValidor.enableValidation();
 

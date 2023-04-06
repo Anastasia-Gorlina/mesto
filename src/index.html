@@ -36,7 +36,7 @@
     <section class="popup popup_type_profile" aria-label="Редактирование профиля">
       <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form popup-edit-form" name="profile-info">
+        <form class="popup__form popup-edit-form" name="profile-info" novalidate="">
             <input type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_type_name" id="profile-edit-name" minlength="2" maxlength="40" required="">
             <span id="profile-edit-name-error" class="popup__error">Вы пропустили это поле.</span>
             <input type="text" name="popup__information" placeholder="Введите описание" class="popup__profile popup__profile_type_information" id="profile-edit-information" minlength="2" maxlength="200" required="">
@@ -82,5 +82,6 @@
         <button type="button" aria-label="Кнопка удалить" class="element__delete_button"></button>
       </article>
     </template>
+    <script type="module" src="../src/pages/index.js"></script>
     </body>
 </html>
