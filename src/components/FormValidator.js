@@ -65,7 +65,6 @@ _setEventListeners = () => {
     });
 }
 
-
 enableValidation() {
     this._toggleButtonState()
     this._setEventListeners()

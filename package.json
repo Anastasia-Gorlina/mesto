@@ -1,5 +1,5 @@
 {
-  "name": "cohort-62",
+  "name": "cohort-64",
   "version": "1.0.0",
   "description": "",
   "main": "./src/pages/index.js",
@@ -90,7 +90,9 @@
   },
   "scripts": {
     "build": " webpack --mode production",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",

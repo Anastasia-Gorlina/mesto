@@ -8,48 +8,47 @@
     <link rel="icon" href="data:;base64,=">
     </head>
     <body class="page">
-      
       <header class="header">
         <img class="header__logo" src="<%=require('./images/Logo.svg')%>" alt="Название сайта">
       </header>
+      <main class="main">
+        <section class="profile">
+          <button class="profile__edit-avatar-button" type="button">
+          <img class="profile__avatar" src="<%=require('./images/avatar.png')%>" alt="Аватар">
+          </button>
+            <div class="profile__info">
+              <div class="profile__title">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button type="button" class="profile__edit-button"></button>
+              </div>
+              <p class="profile__status">Исследователь океана</p>
+            </div>
+          <button type="button" class="profile__button"></button>
+        </section>
+        <section class="elements" aria-label="Фотографии, добавленные пользователем">
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">&copy; 2022 Mesto Russia</p>
+      </footer>
 
-    <main class="main">
-      <section class="profile">
-        <img class="profile__avatar" src="<%=require('./images/avatar.png')%>" alt="Аватар">
-        <div class="profile__info">
-          <div class="profile__title">
-            <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button type="button" class="profile__edit-button"></button>
-          </div>
-          <p class="profile__status">Исследователь океана</p>
+      <section class="popup popup_type_profile" aria-label="Редактирование профиля">
+        <div class="popup__container">
+          <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup-edit-form popup__form" name="profile__name" novalidate="">
+          <input id="profile-edit-name" type="text" name="popup__appellation" placeholder="Введите имя" class="popup__profile popup__profile_name" minlength="2" maxlength="40" required="">
+          <span id="profile-edit-name-error" class="popup__error">Вы пропустили это поле.</span>
+          <input id="profile-edit-information" type="text" name="popup__inf" placeholder="Введите описание" class="popup__profile popup__profile_status" minlength="2" maxlength="200" required="">
+          <span id="profile-edit-information-error" class="popup__error">Вы пропустили это поле.</span>
+          <button type="submit" class="popup__sumbit-button popup__button">Сохранить</button>
+        </form>
+          <button class="popup__close-button popup__close-button_type_profile" type="button"></button>
         </div>
-        <button type="button" class="profile__button"></button>
       </section>
-      <section class="elements" aria-label="Фотографии, добавленные пользователем">
-      </section>
-    </main>
-    
-    <footer class="footer">
-      <p class="footer__text">&copy; 2022 Mesto Russia</p>
-    </footer>
 
-    <section class="popup popup_type_profile" aria-label="Редактирование профиля">
-      <div class="popup__container">
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup-edit-form popup__form" name="profile-info" novalidate="">
-          <input id="profile-edit-name" type="text" name="popup__name" placeholder="Введите имя" class="popup__profile popup__profile_name" minlength="2" maxlength="40" required="">
-            <span id="profile-edit-name-error" class="popup__error">Вы пропустили это поле.</span>
-            <input id="profile-edit-information" type="text" name="popup__inf" placeholder="Введите описание" class="popup__profile popup__profile_status" minlength="2" maxlength="200" required="">
-            <span id="profile-edit-information-error" class="popup__error">Вы пропустили это поле.</span>
-            <button type="submit" class="popup__sumbit-button popup__button">Сохранить</button>
-          </form>
-        <button class="popup__close-button popup__close-button_type_profile" type="button"></button>
-      </div>
-    </section>
-
-    <section class="popup popup_type_card" aria-label="Добавление фото">
-      <div class="popup__container">
-        <h3 class="popup__title">Новое место</h3>
+      <section class="popup popup_type_card" aria-label="Добавление фото">
+        <div class="popup__container">
+          <h3 class="popup__title">Новое место</h3>
         <form class="popup__form popup-add-form" name="profile-form" novalidate="">
           <input id="profile-add-img-name" class="popup__profile popup__profile_img-name" name="popup__name" placeholder="Название" type="text" minlength="2" maxlength="30" required="">
           <span id="profile-add-img-name-error" class="popup__error">Вы пропустили это поле.</span>
@@ -57,31 +56,51 @@
           <span id="profile-edit-img-link-error" class="popup__error">Введите адрес сайта.</span>
           <button type="submit" class="popup__create-button popup__button">Создать</button>
         </form>
-        <button class="popup__close-button popup__close-button_type_card" type="button"></button>
-      </div>
-    </section>
-
-    <section id="popup-big-image" class="popup popup_type_image" aria-label="Увеличение изображения">
-      <div class="popup__figure-container">
-      <figure class="popup__figure">
-        <img class="popup__image" src="#" alt="#">
-        <figcaption class="popup-image-status"></figcaption>
-        <h5 class="popup__image-name"></h5>
-      </figure>
-      <button class="popup__close-button popup__close-button_image" type="button"></button>
-    </div>
-    </section>
-
-    <template class="card__template">
-      <article class="element">
-        <img class="element__image">
-        <div class="element__inf">
-          <h2 class="element__title"></h2>
-          <button type="button" aria-label="Кнопка лайк" class="element__vector"></button>
+          <button class="popup__close-button popup__close-button_type_card" type="button"></button>
         </div>
-        <button type="button" aria-label="Кнопка удалить" class="element__delete_button"></button>
-      </article>
-    </template>
-    <script type="module" src="../src/pages/index.js"></script>
+      </section>
+
+      <section id="popup-big-image" class="popup popup_type_image" aria-label="Увеличение изображения">
+        <div class="popup__figure-container">
+          <figure class="popup__figure">
+            <img class="popup__image" src="#" alt="#">
+            <figcaption class="popup-image-status"></figcaption>
+            <h5 class="popup__image-name"></h5>
+          </figure>
+          <button class="popup__close-button popup__close-button_image" type="button"></button>
+        </div>
+      </section>
+
+      <section class="popup popup_type_delete-picture">
+        <div class="popup__container">
+            <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
+            <h3 class="popup__title">Вы уверены?</h3>
+            <button type="submit" class="popup__button popup__delete-button">Да</button>
+        </div>
+      </section>
+
+      <section class="popup popup_type_change-avatar">
+        <div class="popup__container">
+            <form class="popup__form popup-change-avatar-form">
+                <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
+                <h3 class="popup__title">Обновить аватар</h3>
+                <input type="url" name="popup__avatar-link" placeholder="Ссылка на картинку"
+                    class="popup__input popup__input_type_avatar" id="input-change-avatar" required>
+                <span id="input-change-avatar-error" class="popup__error"></span>
+                <button type="submit" class="popup__button popup__delete-button">Сохранить</button>
+            </form>
+        </div>
+      </section>
+
+      <template class="card__template">
+        <article class="element">
+          <img class="element__image">
+          <div class="element__inf">
+            <h2 class="element__title"></h2>
+            <button type="button" aria-label="Кнопка лайк" class="element__vector"></button>
+          </div>
+            <button type="button" aria-label="Кнопка удалить" class="element__delete_button"></button>
+        </article>
+      </template>
     </body>
 </html>
