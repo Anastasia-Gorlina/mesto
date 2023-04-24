@@ -21,26 +21,24 @@ const popupOpenCard = document.querySelector('.profile__button');//PLUS BUTTON
 const popupAddCardForm = document.querySelector('.popup-add-form');//FORM NEW POPUP
 
 const api = new Api({
-    baseUrl: baseUrl, 
+    baseUrl: baseUrl,
     headers: {
       authorization: token,
       'Content-Type': 'application/json'
     }
 });
 
-/* api - получение информации о пользователе && отрисовка карточек*/
 let user, section;
 
 Promise.all([api.getUserInfo(), api.getInitialCards()])
     .then((result) => {
         user = result[0];
-        userInfo.setUseInfo(result[0].name, result[0].about, result[0].avatar);
-
+        userInfo.setUserInfo(result[0].name, result[0].about, result[0].avatar);
         section = new Section({items: result[1], renderer: createCard}, '.elements');
         section.renderItems(popupWithImage.open);
     })
     .catch((err) => {
-        console.log(err); // выведем ошибку в консоль       
+        console.log(err); // выведем ошибку в консоль
     })
 
 /* api - поставить лайк карточке */
@@ -66,17 +64,17 @@ const handleRemoveLikeClick = (id, toggleLikeColorAndCounter) => {
 }
 
 /* Popup подтверждения удаления карточки */
-    const handleDeleteButtonClick = (id, setInitialText, deleteCard) => {
-        api.deleteCard(id)
-        .then((result) => {
-          deleteCard();
-          PopupWithConfirm.close();
-        })
-        .catch((err) => {
-          console.log(err); // выведем ошибку в консоль
-      })
-      .finally(() => setInitialText());
-    }
+const handleDeleteButtonClick = (id, setInitialText, deleteCard) => {
+  api.deleteCard(id)
+    .then((result) => {
+      deleteCard();
+      popupWithConfirm.close();
+    })
+    .catch((err) => {
+      console.log(err); // выведем ошибку в консоль
+  })
+  .finally(() => setInitialText());
+}
 
 const popupWithConfirm = new PopupWithConfirm('.popup_type_delete-picture', handleDeleteButtonClick);
 popupWithConfirm.setEventListeners();
@@ -85,12 +83,12 @@ const popupWithImage = new PopupWithImage('#popup-big-image');
 popupWithImage.setEventListeners();
 
 const createCard = (cardData) => {
-    return new Card(cardData, 
-                    '.card__template', 
-                    popupWithImage.open, 
-                    handleAddLikeClick, 
+    return new Card(cardData,
+                    '.card__template',
+                    popupWithImage.open,
+                    handleAddLikeClick,
                     handleRemoveLikeClick,
-                    PopupWithConfirm.open,
+                    popupWithConfirm.open,
                     user)
                     .createCard();
 }
@@ -100,7 +98,7 @@ const submitProfileInfo = (data, setInitialText) => {
     popupProfile.setButtonText('Сохранение...');
     api.editUserInfo(data['popup__appellation'], data['popup__inf'])
         .then((result) => {
-            userInfo.setUseInfo(result.name, result.about, result.avatar);
+            userInfo.setUserInfo(result.name, result.about, result.avatar);
             popupProfile.close();
         })
         .catch((err) => {
@@ -130,11 +128,11 @@ const popupAddCard = new PopupWithForm('.popup_type_card', submitFormCard);
 popupAddCard.setEventListeners();
 
 const userInfo = new UserInfo({
-    userNameSelector: '.profile__name', 
+    userNameSelector: '.profile__name',
     userInfoSelector: '.profile__status',
-    //userAvatarSelector: '.profile__avatar'
+    userAvatarSelector: '.profile__avatar'
 });
-    
+
 popupOpenButtonElement.addEventListener('click', function () {
     const data = userInfo.getUserInfo();
     profileName.value = data.name;
@@ -156,9 +154,6 @@ editProfileFormValidor.enableValidation();
 const popupAvatarForm = document.querySelector('.popup-change-avatar-form');
 const avatarEditFormValidator = new FormValidator(validatorConfig, popupAvatarForm);
 avatarEditFormValidator.enableValidation();
-
-const formValidators = {};
-
 
 const handleEditAvatar = (data, setInitialText) => {
     editAvatarPopup.setButtonText('Сохранение...')

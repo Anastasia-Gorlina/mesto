@@ -1,7 +1,7 @@
 export default class Api {
     constructor({ baseUrl, headers }) {
         this._url = baseUrl;
-        this._headers = headers; 
+        this._headers = headers;
     }
 
     _addResult(res) {
@@ -17,7 +17,7 @@ export default class Api {
             headers: this._headers,
         }).then((res) => this._addResult(res))
     };
-    
+
     addNewCard(name, link) {
         return fetch(`${this._url}/cards`, {
             method: 'POST',
@@ -29,7 +29,7 @@ export default class Api {
     };
 
     deleteCard(cardId) {
-        return fetch(`${this.url}/cards/${cardId}`, {
+        return fetch(`${this._url}/cards/${cardId}`, {
             method: 'DELETE',
             headers: this._headers,
         }).then((res) => this._addResult(res))
@@ -74,3 +74,4 @@ export default class Api {
         }).then((res) => this._addResult(res))
     }
 };
+

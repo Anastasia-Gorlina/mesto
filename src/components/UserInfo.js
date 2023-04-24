@@ -7,10 +7,10 @@ export class UserInfo {
     getUserInfo() {
         return {
             name: this._userName.textContent,
-            info: this._userInfo.textContent
-        };
+            info: this._userInfo.textContent,
+        }
     }
-    setUseInfo = (name, info, link) => {
+    setUserInfo = (name, info, link) => {
         this._userName.textContent = name;
         this._userInfo.textContent = info;
         this.setUserAvatar(link);

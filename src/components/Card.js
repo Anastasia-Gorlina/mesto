@@ -17,6 +17,7 @@ export class Card {
     this._likeButtonElement = this._articleElement.querySelector('.element__vector')
     this._cardTitle = this._articleElement.querySelector('.element__title')
     this._cardPicture = this._articleElement.querySelector('.element__image')
+    this._cardLikeCounter = this._articleElement.querySelector('.element__vector-counter')
     }
 
     _handleDeleteCard = () => {

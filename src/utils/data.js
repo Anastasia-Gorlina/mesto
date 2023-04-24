@@ -1,4 +1,4 @@
-export const InitialCards = [
+export const initialCards = [
   {
     name: 'Дагестан',
     link: 'https://images.unsplash.com/photo-1629891592102-31221061e755?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fCVEMCU5NCVEMCVCMCVEMCVCMyVEMCVCNSVEMSU4MSVEMSU4MiVEMCVCMCVEMCVCRHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60'
