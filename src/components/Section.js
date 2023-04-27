@@ -13,10 +13,7 @@ export default class Section {
     }
 
     addItem = (element, method = "prepend") => {
-        if (method === "prepend") {
-            this._container.prepend(element)
-        } else {
-            this._container.append(element) 
-        }
+        this._container[method](element)
+        
     }
 }
