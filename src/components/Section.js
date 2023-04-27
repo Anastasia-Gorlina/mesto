@@ -8,11 +8,15 @@ export default class Section {
     renderItems = (callback) => {
         this._renderedItems.forEach((item) => { 
             const newElement = this._renderer(item, callback)
-            this.addItem(newElement);
+            this.addItem(newElement, "append");
         })
     }
 
-    addItem = (element) => {
-        this._container.prepend(element)
+    addItem = (element, method = "prepend") => {
+        if (method === "prepend") {
+            this._container.prepend(element)
+        } else {
+            this._container.append(element) 
+        }
     }
 }
