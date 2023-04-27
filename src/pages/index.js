@@ -38,7 +38,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
         section.renderItems(popupWithImage.open);
     })
     .catch((err) => {
-        console.log(err); // выведем ошибку в консоль
+        console.log(err); 
     })
 
 /* api - поставить лайк карточке */
@@ -48,7 +48,7 @@ const handleAddLikeClick = (id, toggleLikeColorAndCounter) => {
         toggleLikeColorAndCounter(result);
       })
       .catch((err) => {
-        console.log(err); // выведем ошибку в консоль
+        console.log(err);
     });
 }
 
@@ -59,7 +59,7 @@ const handleRemoveLikeClick = (id, toggleLikeColorAndCounter) => {
         toggleLikeColorAndCounter(result);
       })
       .catch((err) => {
-        console.log(err); // выведем ошибку в консоль
+        console.log(err);
     });
 }
 
@@ -71,7 +71,7 @@ const handleDeleteButtonClick = (id, setInitialText, deleteCard) => {
       popupWithConfirm.close();
     })
     .catch((err) => {
-      console.log(err); // выведем ошибку в консоль
+      console.log(err); 
   })
   .finally(() => setInitialText());
 }
@@ -102,7 +102,7 @@ const submitProfileInfo = (data, setInitialText) => {
             popupProfile.close();
         })
         .catch((err) => {
-            console.log(err); // выведем ошибку в консоль
+            console.log(err); 
         })
         .finally(() => setInitialText())
 }
@@ -116,7 +116,7 @@ const submitFormCard = (data, setInitialText) => {
             popupAddCard.close();
         })
         .catch((err) => {
-            console.log(err); // выведем ошибку в консоль
+            console.log(err);
         })
         .finally(() => setInitialText());
 }
@@ -159,6 +159,7 @@ const formValidators = {};
 
 const handleEditAvatar = (data, setInitialText) => {
     editAvatarPopup.setButtonText('Сохранение...')
+
     api.editUserAvatar(data['popup__avatar-link'])
         .then((res) => {
             userInfo.setUserAvatar(res.avatar)
