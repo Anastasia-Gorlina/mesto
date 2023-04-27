@@ -22,6 +22,7 @@ export class Card {
 
     _handleDeleteCard = () => {
         this._articleElement.remove();
+        
     }
 
     _handleLikeCard = () => {

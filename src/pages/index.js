@@ -155,6 +155,8 @@ const popupAvatarForm = document.querySelector('.popup-change-avatar-form');
 const avatarEditFormValidator = new FormValidator(validatorConfig, popupAvatarForm);
 avatarEditFormValidator.enableValidation();
 
+const formValidators = {};
+
 const handleEditAvatar = (data, setInitialText) => {
     editAvatarPopup.setButtonText('Сохранение...')
     api.editUserAvatar(data['popup__avatar-link'])

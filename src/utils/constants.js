@@ -7,5 +7,5 @@ export const validatorConfig = {
   errorClass: 'popup__error_visible',
 }
 
-export const baseUrl = 'https://mesto.nomoreparties.co/v1/cohort-64/';
+export const baseUrl = 'https://mesto.nomoreparties.co/v1/cohort-64';
 export const token = 'e44d19ac-dce7-428a-9146-8b8a14ccbad7';

@@ -94,7 +94,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "author": "Anastasia Gorlina",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.21.3",
