@@ -27,7 +27,7 @@ export default class PopupWithConfirm extends Popup {
     setEventListeners = () => {
         super.setEventListeners();
         this._popupConfirmBtn.addEventListener('click', () => {
-            this._popupConfirmBtn.setButtonTex = 'Удаление...';
+            this._popupConfirmBtn.setButtonText = 'Удаление...';
             this._handleSubmitBtnClick(this._currentCardId, this._setInitialText, this._currentDeleteCardCallback);
         })
     }
